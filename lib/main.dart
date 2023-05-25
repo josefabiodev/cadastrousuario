@@ -1,7 +1,9 @@
 import 'package:cadastrousuario/pages/auth/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 
-void main() {}
+void main() {
+  runApp(const CadastroUsuario());
+}
 
 class CadastroUsuario extends StatelessWidget {
   const CadastroUsuario({super.key});
@@ -9,6 +11,7 @@ class CadastroUsuario extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: SignUpScreen(),
     );
   }

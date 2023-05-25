@@ -1,3 +1,4 @@
+import 'package:cadastrousuario/pages/common_widgets/custom_text_fiels.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -37,9 +38,10 @@ class SignUpScreen extends StatelessWidget {
                 child: Stack(
                   children: [
                     Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: const [
-                        Center(
+                      children: [
+                        const Center(
                           child: Padding(
                             padding: EdgeInsets.only(bottom: 56),
                             child: Text(
@@ -53,6 +55,53 @@ class SignUpScreen extends StatelessWidget {
                         ),
 
                         // Formulário
+                        const CustomTextField(
+                          icon: Icons.person,
+                          label: "Nome",
+                        ),
+                        const CustomTextField(
+                          icon: Icons.file_copy,
+                          label: "Cpf",
+                        ),
+                        const CustomTextField(
+                          icon: Icons.phone_android,
+                          label: "Celular",
+                        ),
+                        const CustomTextField(
+                          icon: Icons.email,
+                          label: "Email",
+                        ),
+                        const CustomTextField(
+                          icon: Icons.email,
+                          label: "Confirmação email",
+                        ),
+                        const CustomTextField(
+                          icon: Icons.lock,
+                          label: "Senha",
+                        ),
+                        const CustomTextField(
+                          icon: Icons.lock,
+                          label: "Confirmação senha",
+                        ),
+                        SizedBox(
+                          height: 45,
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18),
+                              ),
+                            ),
+                            onPressed: () {},
+                            child: const Text(
+                              "Cadastrar usuário",
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.teal,
+                              ),
+                            ),
+                          ),
+                        )
                       ],
                     ),
                   ],
