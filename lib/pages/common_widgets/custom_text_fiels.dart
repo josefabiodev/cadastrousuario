@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:cadastrousuario/config/custom_colors.dart';
 
 class CustomTextField extends StatefulWidget {
   final IconData icon;
@@ -19,12 +20,32 @@ class _CustomTextFieldState extends State<CustomTextField> {
   Widget build(BuildContext context) {
     return TextFormField(
       decoration: InputDecoration(
-          prefixIcon: Icon(widget.icon),
-          isDense: true,
-          labelText: widget.label,
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(18),
-          )),
+        prefixIcon: Icon(
+          widget.icon,
+          color: CustomColors.customColorWhite,
+        ),
+        isDense: true,
+        labelText: widget.label,
+        labelStyle: TextStyle(
+          color: CustomColors.customColorWhitealpha200,
+        ),
+        // border: OutlineInputBorder(
+        //   borderRadius: BorderRadius.circular(18),
+        // ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(18),
+          borderSide: BorderSide(
+            color: CustomColors.customColorWhite,
+          ),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(18),
+          borderSide: BorderSide(
+            width: 1.5,
+            color: CustomColors.customColorWhite,
+          ),
+        ),
+      ),
     );
   }
 }

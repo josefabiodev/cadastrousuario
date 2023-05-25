@@ -1,4 +1,5 @@
 import 'package:cadastrousuario/pages/common_widgets/custom_text_fiels.dart';
+import 'package:cadastrousuario/config/custom_colors.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -8,26 +9,26 @@ class SignUpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.teal,
-        title: const Text(
-          'Cadstro de usuário',
-          style: TextStyle(color: Colors.white),
+        backgroundColor: CustomColors.CustomColorTeal,
+        title: Text(
+          'Cadastro de usuário',
+          style: TextStyle(color: CustomColors.customColorWhite),
         ),
       ),
       body: Center(
         child: SingleChildScrollView(
           child: SizedBox(
             child: Container(
-              decoration: const BoxDecoration(
-                color: Colors.teal,
-                borderRadius: BorderRadius.all(
+              decoration: BoxDecoration(
+                color: CustomColors.CustomColorTeal,
+                borderRadius: const BorderRadius.all(
                   Radius.circular(18),
                 ),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.grey,
+                    color: CustomColors.CustomColorGrey,
                     blurRadius: 4,
-                    offset: Offset(4, 8),
+                    offset: const Offset(4, 8),
                   ),
                 ],
               ),
@@ -41,13 +42,13 @@ class SignUpScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        const Center(
+                        Center(
                           child: Padding(
-                            padding: EdgeInsets.only(bottom: 56),
+                            padding: const EdgeInsets.only(bottom: 56),
                             child: Text(
                               'Cadastro',
                               style: TextStyle(
-                                color: Colors.white,
+                                color: CustomColors.customColorWhite,
                                 fontSize: 35,
                               ),
                             ),
@@ -87,17 +88,17 @@ class SignUpScreen extends StatelessWidget {
                           height: 45,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.white,
+                              backgroundColor: CustomColors.customColorWhite,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(18),
                               ),
                             ),
                             onPressed: () {},
-                            child: const Text(
+                            child: Text(
                               "Cadastrar usuário",
                               style: TextStyle(
                                 fontSize: 18,
-                                color: Colors.teal,
+                                color: CustomColors.CustomColorTeal,
                               ),
                             ),
                           ),
