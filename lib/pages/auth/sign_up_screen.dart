@@ -1,9 +1,24 @@
 import 'package:cadastrousuario/pages/common_widgets/custom_text_fiels.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:cadastrousuario/config/custom_colors.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatelessWidget {
-  const SignUpScreen({super.key});
+  SignUpScreen({super.key});
+
+  final cpfFormatter = MaskTextInputFormatter(
+    mask: '###.###.###-##',
+    filter: {
+      '#': RegExp(r'[0-9]'),
+    },
+  );
+
+  final phoneFormatter = MaskTextInputFormatter(
+    mask: '(##) # ####-####',
+    filter: {
+      '#': RegExp(r'[0-9]'),
+    },
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -60,13 +75,15 @@ class SignUpScreen extends StatelessWidget {
                           icon: Icons.person,
                           label: "Nome",
                         ),
-                        const CustomTextField(
+                        CustomTextField(
                           icon: Icons.file_copy,
                           label: "Cpf",
+                          inputFormatters: [cpfFormatter],
                         ),
-                        const CustomTextField(
+                        CustomTextField(
                           icon: Icons.phone_android,
                           label: "Celular",
+                          inputFormatters: [phoneFormatter],
                         ),
                         const CustomTextField(
                           icon: Icons.email,
