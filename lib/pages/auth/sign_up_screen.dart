@@ -79,10 +79,12 @@ class SignUpScreen extends StatelessWidget {
                         const CustomTextField(
                           icon: Icons.lock,
                           label: "Senha",
+                          isSecret: true,
                         ),
                         const CustomTextField(
                           icon: Icons.lock,
                           label: "Confirmação senha",
+                          isSecret: true,
                         ),
                         SizedBox(
                           height: 45,
