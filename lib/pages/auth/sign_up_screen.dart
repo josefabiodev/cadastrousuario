@@ -25,6 +25,8 @@ class SignUpScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: CustomColors.CustomColorTeal,
+        centerTitle: true,
+        elevation: 1,
         title: Text(
           'Cadastro de usuário',
           style: TextStyle(color: CustomColors.customColorWhite),
